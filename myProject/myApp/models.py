@@ -28,3 +28,41 @@ class enquiry(models.Model):
 	def __str__(self):
          return self.FirstName
 	
+
+class Product(models.Model):
+	Category = models.CharField(max_length=255)
+	
+class SmartPhones(models.Model):
+	ProductName = models.CharField(max_length=255)
+	BrandName = models.CharField(max_length=255)
+	ReleasedDate = models.DateField()
+	AverageCost = models.CharField(max_length=255)
+	Description = models.CharField(max_length=255)
+	Image = models.CharField(max_length=2000)
+
+	def __str__(self):
+            return self.ProductName
+
+class SmartWatches(models.Model):
+	ProductName = models.CharField(max_length=255)
+	BrandName = models.CharField(max_length=255)
+	ReleasedDate = models.DateField()
+	AverageCost = models.CharField(max_length=255)
+	Description = models.CharField(max_length=255)
+	Image = models.CharField(max_length=2000)
+
+def __str__(self):
+            return self.ProductName
+
+class Televisions(models.Model):
+	ProductName = models.CharField(max_length=255)
+	BrandName = models.CharField(max_length=255)
+	ReleasedDate = models.DateField()
+	AverageCost = models.CharField(max_length=255)
+	Description = models.CharField(max_length=255)
+	Image = models.CharField(max_length=2000)
+
+def __str__(self):
+         return self.ProductName
+
+	

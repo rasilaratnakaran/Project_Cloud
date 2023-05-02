@@ -133,7 +133,7 @@ footer {
     <header> 
         <nav> <div>
         <li>  
-          <a href=" "><i class="fa fa-home"></i><b> Home</b> </a>   
+          <a href="http://127.0.0.1:8000/ "><i class="fa fa-home"></i><b> Home</b> </a>   
         </li>  
         <li>  
           <a href="/about"><i class="fa fa-fw fa-user"></i><b> About</b> </a>  
@@ -143,14 +143,15 @@ footer {
         </li>  </div> </nav>
 
       
-                    <!-- Navbar Right Side -->
-                    <nav>
-                        <li>
-                          <a href="/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
-                        </li>
-                        <li>
-                          <div style= "margin-right: 5px"><a><b><i class='  fa fa-shopping-cart' ></i></b></a></div>
-                        </li>
+        <li>
+          {% if not user.is_authenticated %}
+          <a href="/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+          {% else %}
+          <a href="{% url 'profile' %}"><i class=' fa fa-fw fa-user'></i><b>Profile  </b></a>
+          <a href="{% url 'logout' %}"><i class='fa fa-sign-out'></i><b>Logout</b></a>
+          {% endif %}
+        </li>
+                        
                          
                       </nav>
                       </header>
@@ -178,7 +179,11 @@ footer {
         </div>
     </main>
             
-   
+    <footer>
+      <p> © 2023 Gadget Aura. All rights reserved.</p>
+        
+        <p style="font-family:'Chiller'"> For Service-Related Enquiries Contact:service@gadgetaura.com</p>
+      </footer>  
 
 
 </body>

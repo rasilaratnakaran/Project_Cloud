@@ -157,22 +157,32 @@ body{
         </div>
       </div>
   </li> 
+</div>
+<div >
+  
+  </div>
   
  </div> </nav>
  <nav>
   <li>
-    <a href="/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+    {% if not user.is_authenticated %}
+    <a href="/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+    {% else %}
+    <a href="{% url 'profile' %}"><i class=' fa fa-fw fa-user'></i><b>Profile  </b></a>
+    <a href="{% url 'logout' %}"><i class='fa fa-sign-out'></i><b>Logout</b></a>
+    {% endif %}
   </li>
   <li>
-    <div style= "margin-right: 5px"><a><b><i class='  fa fa-shopping-cart' ></i></b></a></div>
+    <div style= "margin-right: 5px"><a><b><i class='  fa fa-shopping-cart' ></i> Cart</b></a></div>
   </li>
   
   
 </nav>
+
 </header>
 <div style="padding-left:16px">
 <h1 style="color:red;"> Gadget Aura </br>
-    {% load static %}  <img src="{% static "myApp/image/ab.jpg" %}"  height="50" width="50"/>
+   
   
 
     
@@ -192,10 +202,10 @@ body{
         </ul>
     </div>
 </div>
-        </div>
+        
     </main>
           
-    {% load static %}  <img src="{% static "myApp/image/aaa.jpg" %}" alt="Gaadget Aura" height="900" width="1150"/>
+    {% load static %}  <img src="{% static "myApp/image/aaa.jpg" %}" alt="Gaadget Aura" height="900" width="1150"/>  
 <footer>
 <p> © 2023 Gadget Aura. All rights reserved.</p>
   

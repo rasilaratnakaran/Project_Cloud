@@ -401,18 +401,21 @@
     <li>  
         <a href="/contact"><i class="fa fa-fw fa-envelope"></i><b> Contact</b></a>  
     </li> 
-                 
+    <li>
+    {% if not user.is_authenticated %}
+    <a href="/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+    {% else %}
+    <a href="{% url 'profile' %}"><i class=' fa fa-fw fa-user'></i><b>Profile  </b></a>
+    <a href="{% url 'logout' %}"><i class='fa fa-sign-out'></i><b>Logout</b></a>
+    {% endif %}
+
+    </li>
+    
+                     
     </div> </nav>
-    <nav>
-     <li>
-       <a href="/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
-     </li>
-     
-        </nav>
+    
         </header>
-  
-  
-  
+   
       
   <div class="landing_page">
     <div class="responsive-container-block big-container">
@@ -516,6 +519,7 @@
   </div>
   
   </div>
+  
   <footer>
     <p> © 2023 Gadget Aura. All rights reserved.</p>
       

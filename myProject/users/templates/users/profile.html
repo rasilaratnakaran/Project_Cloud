@@ -1,5 +1,40 @@
 {% extends "myApp/base.html" %}
 {% load crispy_forms_tags %}
-{% block content %}
-<h1> {{ user.username}}</h1>
-{% endblock content %}
+
+{% block content %}<div class="content-section">
+    <div class="media">
+       
+        <div class="media-body">
+            <h2 class="account-heading">{{user.firstname}}</h2>
+            <p class="text-secondary">{{user.username}}</p>
+            <p class="text-secondary">{{user.email}}</p>
+        </div>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4"> Profile Details</legend>
+            {{u_form|crispy}}
+            {{p_form|crispy}}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+<style type=text/css>
+
+    body{
+            background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-6469387_960_720.jpg");
+        }</style>
+    footer {
+        text-align: center;
+        padding: 0px;
+        background-color: red;
+        color: white;
+      } </style>
+    <footer>
+        <p> © 2023 Gadget Aura. All rights reserved.</p>
+          
+          <p style="font-family:'Chiller'"> For Service-Related Enquiries Contact:service@gadgetaura.com</p>
+        </footer>{% endblock content %}
