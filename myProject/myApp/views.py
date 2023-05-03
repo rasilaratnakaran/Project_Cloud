@@ -36,6 +36,8 @@ def product3(request):
         return render(request, 'myApp/product3.html')
 
 
+
+
            
 
 
