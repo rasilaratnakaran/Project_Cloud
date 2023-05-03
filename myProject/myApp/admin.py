@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product,SmartPhones,SmartWatches,Televisions
+from .models import Product,SmartPhones,SmartWatches,Televisions, enquiry
 
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):
@@ -17,3 +17,7 @@ admin.site.register(SmartWatches,SmartWatch_admin)
 class Television_admin(admin.ModelAdmin):
     list_display = ('ProductName','BrandName','ReleasedDate','AverageCost','Description','Image',)
 admin.site.register(Televisions,Television_admin)
+
+admin.site.register(enquiry)
+
+
