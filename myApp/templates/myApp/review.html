@@ -129,9 +129,10 @@ footer {
 <body>
     <header> 
         <nav> <div>
-        <li>  
-          <a href=" "><i class="fa fa-home"></i><b> Home</b> </a>   
-        </li>  
+          <li> 
+            <a  href="{% url 'myApp-home' %}"><i class="fa fa-home"></i><b>Home</b></a>  
+            
+            </li>   
         <li>  
           <a href="/about"><i class="fa fa-fw fa-user"></i><b> About</b> </a>  
         </li>  
@@ -143,12 +144,9 @@ footer {
                     <!-- Navbar Right Side -->
                     <nav>
                         <li>
-                          <a href="/signin"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+                          <a href="{% url 'login' %}"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
                         </li>
-                        <li>
-                          <div style= "margin-right: 5px"><a><b><i class='  fa fa-shopping-cart' ></i></b></a></div>
-                        </li>
-                         
+                                                 
                       </nav>
                       </header>
   <h1>Reviews</h1>
