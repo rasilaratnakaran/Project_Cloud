@@ -252,7 +252,7 @@ background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-64
     
     <li>
     
-    <a href="http://127.0.0.1:8000/ "><i class="fa fa-home"></i><b> Home</b> </a>
+      <a  href="{% url 'myApp-home' %}"><i class="fa fa-home"></i><b>Home</b></a> 
     
     </li>
     
@@ -292,7 +292,7 @@ background-image: url("https://cdn.pixabay.com/photo/2021/07/15/20/52/gadgets-64
     <nav>
       <li>
         {% if not user.is_authenticated %}
-        <a href="/login"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
+        <a href="{% url 'login' %}"><i class=' fa fa-fw fa-user'></i><b>Login/Register</b></a>
         {% else %}
         <a href="{% url 'profile' %}"><i class=' fa fa-fw fa-user'></i><b>Profile  </b></a>
         <a href="{% url 'logout' %}"><i class='fa fa-sign-out'></i><b>Logout</b></a>

@@ -16,9 +16,9 @@ path('smartwatch', views.smartwatch, name='myApp-smartwatch'),
 path('smartphone', views.smartphone, name='myApp-smartphone'),
 path('television', views.television, name='myApp-television'),
 path('login', views.login, name='users-login'),
-#path('review', views.ReviewView.as_view(), name='myApp-review'),
-#path('edit-review/<int:pk>', views.ReviewUpdateView.as_view(), name='review_update'),
-#path('delete-review/<int:pk>', views.DeleteReviewView.as_view(), name='review_delete'),
+path('review', views.ReviewView.as_view(), name='myApp-review'),
+path('edit-review/<int:pk>', views.ReviewUpdateView.as_view(), name='review_update'),
+path('delete-review/<int:pk>', views.DeleteReviewView.as_view(), name='review_delete'),
 
  ]
  
