@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'myApp.apps.MyappConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'crispy_bootstrap4',
     'storages',
 ]
 
